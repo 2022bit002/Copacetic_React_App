@@ -31,10 +31,13 @@ export default function Challenge(props) {
             {isNewWord && (<p>{defintion}</p>)}
             <div className="helper">
                 <div>
-                    {}
+                    {/* CONTAINS ALL THE ERROR CORRECTIOB VISUAL BARS */}
                     {[...Array(defintion.length).keys()]
                         .map((char, elementIdx) => {
-                            
+                            // determine whether or not the user has typed the character they think is correct, and show red or blue depending on whether or not it's acutally correct
+                            const styleToApply = inputVal.length < char + 1 ?
+                                '' :
+                                inputVal.split('')[elementIdx].toLowerCase() == defintion.split('')[elementIdx].toLowerCase() ? 'correct' : 'incorrect'
 
                             return (
                                 <div className={' ' + styleToApply} key={elementIdx}></div>
@@ -57,7 +60,7 @@ export default function Challenge(props) {
                             setShowDefinition(false)
                             setInputVal('')
                             return
-                            
+                          
                         }
 
                     }
