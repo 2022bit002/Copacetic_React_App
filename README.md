@@ -1,4 +1,4 @@
-Word Memory App
+**Word Memory App:**
 A full-featured vocabulary learning app that helps users master advanced words with spaced repetition, progress tracking, and seamless cross-device functionality.
 
 ## 🚀 Live Demo
